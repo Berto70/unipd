@@ -1,0 +1,155 @@
+\documentclass{aastex63}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+%\usepackage[UTF8]{inputenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{epsf}
+\usepackage{hyperref}
+\usepackage{physics}
+%\usepackage{deluxetable}
+\usepackage[italian,english]{varioref}
+\usepackage[greek,italian]{babel}
+
+
+\shorttitle{Focale lente convergente}
+\shortauthors{Gabriele Bertinelli}
+
+\begin{document}
+\title{Misura della focale di una lente convergente sottile}
+
+\author{Gabriele Bertinelli - 1219907}
+\collaboration{1}{}  
+
+\email{gabriele.bertinelli@studenti.unipd.it}
+\affiliation{Dipartimento Fisica e Astronomia, UniPD\\
+Corso di Astronomia, a.a. 2020-2021}
+
+\section{Introduzione}
+Una lente è un elemento ottico, generalmente in vetro o materiali plastici, che ha la proprietà di concentrare o di far divergere i raggi di luce.
+In particolare, questa relazione è incentrata sulla misura della focale di una lente convergente biconvessa, ovvero con le proprietà di far convergere
+dei raggi luminosi collimati (paralleli all'asse) in un punto dell'asse, oltre la lente, chiamato \textit{punto focale}; la distanza tra la lente sottile e il fuoco si chiama \textit{lunghezza focale}.\\
+La caratteristica di \textit{lente sottile} è utile nell'analisi dei dati perché permette di non considerare ciò che accade all'interno della lente.\\
+Generalmente si possono utilizzare per la misura diversi metodi:
+\begin{enumerate}
+    \item metodo della collimazione;
+    \item metodo dei punti coniugati;
+    \item metodo di Bessel;
+    \item variante di Silbermann.
+\end{enumerate}
+Verranno trattati solo i primi due metodi.
+
+\section{Raccolta dati}
+In questa sezione vengono analizzati i due metodi di misura.
+\subsection{Metodo della collimazione - Accenni teorici}
+Si consideri una lente convergente e si ponga una sorgente di luce a sinistra della lente, tanto lontana da portela considerare all'infinito e i suoi raggi paralleli.
+Si sa che tale lente concentrerà il fascio collimato in un punto detto fuoco secondario ($F_2$), a destra della lente. Ma la lente è dotata di due fuochi, per cui se si pone la sorgente nel fuoco primario ($F_1$)
+essa genera un fascio di raggi che viene collimato dalla lente in un fascio di raggi paralleli all'asse ottico, che emerge a destra della lente.\\
+Per una lente simmetrica, come nel caso preso in esame, le distanze focali coincidono e nel limite di spessore nullo della lente (i.e. sul bordo esterno) sono uguali alla distanza focale della lente, che è quella per cui vale l'espressione dei \textit{punti coniugati}.\\
+Dunque, se si pone la lente a una distanza dalla sorgente puntiforme tale che il fascio emergente sia collimato, quella distanza è proprio la lunghezza focale della lente.
+
+\subsection{Metodo dei punti coniugati - Accenni teorici}\label{subsec:coniugatiteor}
+Questo metodo sfrutta l'equazione dei punti coniugati:
+\begin{equation*}
+    \frac{1}{p}+\frac{1}{q}=\frac{1}{f}
+\end{equation*}
+In cui $p$ è la distanza tra la sorgente puntiforme e la lente; $q$ è la distanza tra la lente e lo schermo; $f$ è la distanza focale. (Fig. \ref{fig:schemabanco})\\
+Riscrivendo l'equazione, esplicitando $f$, si ottiene
+\begin{equation*}
+    f=\frac{pq}{p+q}
+\end{equation*}
+
+\subsection{Metodo della collimazione - Accenni pratici}\label{subsec:collim}
+Si provvede ad avvitare la lente nell'apposito supporto e a centrarla in modo che il suo centro cada in corrispondenza della tacca bianca del supporto. 
+Per il centraggio si regola la vite micrometrica del supporto in posizione di azzeramento indicata sul supporto ($\Delta_{micrometro}$), cui si aggiunge il semispessore minimo della lente $\frac{dr}{2}$.\\
+Dopo aver posizionato la mascherina puntiforme a ridosso della sorgente, si pone la lente a diverse distanze di $p$ dalla sorgente, fino a trovare la distanza alla quale il fascio è collimato. Per controllare la collimazione
+del fascio si fa scorrere lo schermo lungo la rotaia, controllando che l'immagine che si forma su di esso mantenga sempre lo stesso diametro. È possibile determinare il massimo e il minimo valore corretto di $p$, per ottenere una stima di $f$.\\
+Questo metodo è poco accurato e, come si vedrà nella sezione di analisi dati, si discosterà significativamente dal valore reale.
+
+\subsection{Metodo dei punti coniugati - Accenni pratici}\label{subsec:coniugatiprat}
+Dopo aver posizionato la mascherina puntiforme a ridosso della sorgente e il diaframma (Fig. \ref{fig:schemabanco}), per mettersi nella condizione di raggi parassiali, si provvede a posizionare la lente a una distanza $p_k$, con $k=1,2,...,10$, dalla sorgente. 
+Si porta lo schermo vicino alla lente e si comincia ad allontanarlo finché i due punti-immagine diventano uno solo. Si misura la posizione dello schermo, indicando questo valore come $q_{k,min}$. A causa della profondità di campo, esisterà un $q_{k,max}$ oltre il quale il punto si sfuoca di nuovo in due punti. 
+Si calcola la media tra $q_{k,min}$ e $q_{k,max}$ e si considera quella come valore di $q_k$ associato a $p_k$. 
+
+\section{Analisi dati}
+\subsection{Metodo della collimazione}
+Nella sezione \ref{subsec:collim} si è descritto il metodo di raccolta dati. Si sono calcolate 10 coppie di $s_{k,min}$ e $s_{k,max}$, ovvero la distanza della lente dallo $0$ della scala graduata, per ogni posizione dello schermo $h_k$ (con $k=1,...,10$). Le misure sono raccolte nella Tabella ().\\
+La misura di $p_{k,min/max}$, ovvero la distanza tra la sorgente e la lente (che per questo metodo sarà anche una stima della focale $f$), è data da $p_{k,min/max}=s_k-d$ (per ogni valore di $s_{k,min/max}$), dove $d$ è la distanza della sorgente dallo $0$ della scala graduata.\\
+Il valore di $p_k$ si calcola operando una media aritmetica 
+\begin{equation}
+    p_k=\frac{p_{k,min}+p_{k,max}}{2}
+    \label{eq:pk}
+\end{equation}
+Per avere una stima della lunghezza focale $f$, ovvero di $p$, si calcola nuovamente la media aritmetica tra i valori di $p_k$, trovati tramite \ref{eq:pk}
+\begin{equation}
+    p=\frac{\sum_{k=1}^{10} p_k}{10}
+\end{equation}
+L'errore sulla misura di $p_k$ $\sigma_{p_k}$ è dato dalla somma dell'errore di sensibilità della posizione della sorgente $\sigma_{source}$ e dell'errore di sensibilità sulla posizione della lente $\sigma_{lens}$.
+\begin{equation}
+    \sigma_{p_k}=\sigma_{source}+\sigma_{lens}
+\end{equation}
+L'errore sulla misura finale di $p$ (o $f$) è dato dalla deviazione standard
+\begin{equation}
+    \sigma_p=\sqrt{\frac{\sum_{k=1}^{10}(p-p_k)^2}{9}}
+\end{equation}
+Nella Sezione \ref{sec:appendix} sono riportate le misure graficate.
+
+\subsection{Metodo dei punti coniugati}
+Nella Sezione \ref{subsec:coniugatiteor} veniva scritta l'equazione dei punti coniugati che riportiamo per semplicità
+\begin{equation}
+    f=\frac{pq}{p+q}
+    \label{eq:punticon}
+\end{equation}
+Calcoliamo ora l'errore massimo associato $\Delta f$ utilizzando la propagazione degli errori:
+\begin{equation}
+    \Delta f=\abs{\frac{\partial f}{\partial p}}\Delta p + \abs{\frac{\partial f}{\partial q}}\Delta q
+\end{equation}
+Svolgendo i calcoli diventa
+\begin{equation}
+    \Delta f= \frac{q^2}{(p+q)^2}\Delta p + \frac{p^2}{(p+q)}\Delta q
+\end{equation}
+Nella Sezione \ref{subsec:coniugatiteor} è stato discusso il metodo pratico di raccolta dati.\\
+Per ogni posizione della lente $p_k$, con $k=1,...,10$, si raccolgono 10 coppie di misure $[\,q_{kj,min},q_{kj,max}]\,$, tali che i due punti luminosi siano sempre sovrapposti. Per ogni coppia $[\,q_{kj,min},q_{kj,max}]\,$
+si calcola il valore medio $q_{k,j}$. Ad ogni valore $p_k$ verrà assegnata la misura $q_k$ data dalla media aritmetica dei $q_{k,j}$. Algebricamente 
+\begin{subequations}
+    \begin{align}
+    q_{k,j}&=\frac{q_{kj,min}+q_{kj,max}}{2} \quad \quad j=1,...,10\\
+    q_k&=\frac{\sum_{j=1}^{10}q_{k,j}}{10} \\
+    \sigma_{q_k}&=\sqrt{\frac{\sum_{j=1}^{10}(q_{k,j}-q_k)^2}{9}} \label{eq:sigmaqk}
+    \end{align}
+\end{subequations}
+La \ref{eq:sigmaqk} è l'errore sulla misura $q_k$ associata al valore $p_k$.\\
+A causa dell'effetto combinato di profondità di campo e errore di misura, si è usato l'errore massimo $\Delta q_k=3\sigma_{q_k}$.\\
+Per ogni valore di $k$ si è calcolato il corrispondente valore della lunghezza focale $f_k$ e del suo errore $\Delta f_k$. Si è calcolato, infine, la media pesata degli $f_k$ per ricavare la lunghezza focale della lente $f$:
+\begin{subequations}
+    \begin{align}
+        f&=\frac{\sum_{k=1}^{10}\omega_k f_k}{\sum_{k=1}^{10}\omega_k}\\
+        \sigma_{f_k}&=\frac{1}{\sqrt{\sum_{k=1}^{10}\omega_k}}\\
+        \omega_k&=\bigg(\frac{1}{\sigma_{f_k}}\bigg)^2
+    \end{align}
+\end{subequations}
+Si è tenuto conto del fatto che $\Delta f_k=3\sigma_{f_k}$ e $\Delta f=3\sigma_f$.
+
+
+
+
+
+
+
+
+\newpage
+\appendix
+\restartappendixnumbering
+\section{Tabelle e figure}\label{sec:appendix}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.60\textwidth]{schema.jpg}
+    \caption{Rappresentazione schematica del banco ottico per il \textit{metodo dei punti coniugati}. Per il \textit{metodo della collimazione} bisogna considerare lo schema a meno del \textit{diaframma D4}.}
+    \label{fig:schemabanco}
+\end{figure}
+
+\end{document}
